@@ -1,0 +1,58 @@
+/* ===============================
+   Tema Medieval Fantasioso
+   =============================== */
+
+/* Corpo geral */
+body {
+  background-color: #2B1D0E; /* Fundo marrom escuro */
+  color: #E6D8A3;           /* Fonte clara tipo pergaminho */
+  font-family: 'Garamond', 'Times New Roman', serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabeçalhos e títulos */
+h1, h2, h3 {
+  color: #C9A227; /* Dourado envelhecido para destaque */
+  text-shadow: 1px 1px 4px #000;
+}
+
+/* Links e elementos de destaque */
+a {
+  color: #C9A227;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #E6D8A3; /* Clareia ao passar o mouse */
+  text-shadow: 0 0 6px #C9A227;
+}
+
+/* Estrutura principal */
+.page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(20, 10, 5, 0.85); /* leve transparência */
+  border: 2px solid #C9A227;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #000;
+}
+
+/* Sidebar */
+.sidebar {
+  background: rgba(60, 40, 20, 0.8);
+  border-left: 2px solid #C9A227;
+  padding: 1.5rem;
+}
+
+/* Rodapé */
+footer {
+  margin-top: 2rem;
+  border-top: 1px solid #C9A227;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
