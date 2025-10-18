@@ -56,3 +56,53 @@ footer {
   text-align: center;
   font-size: 0.9rem;
 }
+/* =======================================================
+   Ajustes complementares — requisitos da tarefa
+   ======================================================= */
+
+/* 1. Aspectos gerais da página */
+body {
+  width: 1200px;              /* a) tamanho fixo da página */
+  margin: 0 auto;             /* centraliza horizontalmente */
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif; /* b) fonte sans-serif */
+}
+
+/* Indentação dos parágrafos */
+p {
+  text-indent: 1em;           /* c) recuo de 1em */
+}
+
+/* 2. Títulos */
+h1, h2, h3 {
+  text-align: center;         /* centraliza todos os títulos */
+}
+
+h1 {
+  font-size: 1.8rem;          /* tamanho definido */
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+/* 3. Seções de resumo e principal */
+
+/* a) Seção de resumo (id="zen-summary") */
+#zen-summary {
+  text-align: center;         /* pode mudar para right, se desejar */
+}
+
+/* b) Seção principal (id="zen-supporting") */
+#zen-supporting p {
+  line-height: 1.5;           /* espaçamento entre linhas 1.5 */
+}
+
+/* 4. Abreviaturas */
+abbr {
+  font-variant: small-caps;   /* texto em small-caps */
+  letter-spacing: 0.05em;     /* leve espaçamento entre letras */
+}
