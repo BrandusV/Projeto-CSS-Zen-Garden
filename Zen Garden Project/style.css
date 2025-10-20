@@ -199,3 +199,110 @@ footer a:hover {
   color: #E6D8A3;
   border-color: #C9A227;
 }
+/* =======================================================
+   5. Estrutura de posicionamento — page-wrapper e painéis
+   ======================================================= */
+
+/* 1. Define o elemento principal como referência para posicionamento */
+.page-wrapper {
+  position: relative; /* referência para posicionamento absoluto interno */
+}
+
+/* 2. Ajustes no painel de explicação principal */
+.explanation {
+  width: 60%;               /* ocupa 60% da largura */
+  margin-right: 35%;        /* cria o espaço à direita */
+  border-right: 1px solid #1f295c;  /* borda lateral direita */
+  padding-right: 2%;        /* espaçamento interno à direita */
+  box-sizing: border-box;   /* garante que o padding não ultrapasse a largura */
+}
+
+/* 3. Posicionamento do menu de designs à direita da página */
+#design-selection {
+  position: absolute;
+  top: 560px;               /* inicia logo após a introdução */
+  left: 62%;                /* começa após o painel explanation */
+  width: 35%;               /* ocupa o espaço restante */
+  padding: 0 2%;            /* espaçamento horizontal interno */
+  box-sizing: border-box;
+}
+
+/* =======================================================
+   3.1. Painel de Designs (ajuste de tamanho e posição)
+   ======================================================= */
+
+/* =======================================================
+   Painel de Designs — Ajuste de proporção e tipografia
+   ======================================================= */
+
+#design-selection {
+  position: absolute;
+  top: 560px;              /* inicia após a introdução */
+  left: 62%;               /* começa após o painel explanation */
+  width: 28%;              /* reduzido para melhor alinhamento */
+  max-height: 380px;       /* altura máxima menor para não ultrapassar o box de participação */
+  overflow-y: auto;        /* adiciona rolagem se necessário */
+  padding: 0 1.5%;         /* espaçamento interno menor */
+  box-sizing: border-box;
+  background-color: rgba(230, 216, 163, 0.85); /* fundo translúcido */
+  border: 1px solid #1f295c;
+  border-radius: 8px;
+  backdrop-filter: blur(3px);
+  scrollbar-width: thin;
+  scrollbar-color: #1f295c #E6D8A3;
+}
+
+/* Barra de rolagem personalizada (para navegadores Webkit) */
+#design-selection::-webkit-scrollbar {
+  width: 6px;
+}
+#design-selection::-webkit-scrollbar-track {
+  background: #E6D8A3;
+}
+#design-selection::-webkit-scrollbar-thumb {
+  background-color: #1f295c;
+  border-radius: 8px;
+}
+
+/* Título do painel */
+#design-selection h3 {
+  text-align: center;
+  color: #1f295c;
+  font-weight: bold;
+  font-size: 1rem; /* diminuído */
+  margin-bottom: 0.4em;
+}
+
+/* Lista e itens do menu */
+#design-selection ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#design-selection li {
+  margin: 0.4em 0; /* espaçamento reduzido */
+}
+
+/* Links individuais dos designs */
+#design-selection a {
+  text-decoration: none;
+  color: #2B1D0E;
+  background-color: #E6D8A3;
+  padding: 0.25em 0.4em;
+  border: 1px solid #C9A227;
+  border-radius: 5px;
+  font-size: 0.8rem; /* fonte reduzida */
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+#design-selection a:hover {
+  background-color: #1a1208;
+  color: #E6D8A3;
+  border-color: #E6D8A3;
+}
+
+
+
