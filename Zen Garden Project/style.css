@@ -106,3 +106,96 @@ abbr {
   font-variant: small-caps;   /* texto em small-caps */
   letter-spacing: 0.05em;     /* leve espaçamento entre letras */
 }
+/* =======================================================
+   Ajustes — Diretrizes gerais e layout
+   ======================================================= */
+
+/* 1. Estrutura geral da página */
+body {
+  width: 80%;                 /* largura geral em 80% */
+  max-width: 1280px;          /* limite máximo de 1280px */
+  margin: 0 auto;             /* centraliza a página na tela */
+}
+
+/* Seção de introdução com altura fixa */
+#zen-intro {
+  height: 550px;
+}
+
+/* Remove o container de arquivos de design da renderização */
+#design-archives {
+  display: none;
+}
+
+/* =======================================================
+   2. Cabeçalho
+   ======================================================= */
+header[role="banner"] {
+  background-color: #1a1208;  /* fundo escuro */
+  color: #E6D8A3;             /* fonte clara */
+  display: flex;              /* coloca h1 e h2 lado a lado */
+  align-items: center;        /* alinha verticalmente */
+  justify-content: space-between; /* separa título e subtítulo */
+  padding: 1em 2em;           /* espaçamento interno */
+  border-bottom: 2px solid #C9A227; /* mantém estilo dourado */
+}
+
+header h1 {
+  margin: 0;
+  padding-left: 1em;          /* espaçamento lateral para o título principal */
+}
+
+header h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* =======================================================
+   3. Menus laterais
+   ======================================================= */
+
+/* Remove os bullets dos menus */
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Espaçamento e centralização dos itens de menu */
+.sidebar li {
+  margin-bottom: 1em;         /* aumenta o espaçamento entre os itens */
+  text-align: center;         /* centraliza cada item */
+}
+
+/* =======================================================
+   4. Rodapé
+   ======================================================= */
+
+footer {
+  background-color: #C9A227;  /* inverte as cores: fundo claro */
+  color: #2B1D0E;             /* texto escuro */
+  margin: 4%;                 /* espaçamento externo de 4% */
+  padding: 1em;
+  text-align: center;
+  border-top: 3px solid #2B1D0E;
+}
+
+/* Links do rodapé transformados em caixas */
+footer a {
+  display: inline-block;
+  border: 2px solid #2B1D0E;  /* borda sólida escura */
+  padding: 0.5em;
+  margin: 0.3em;
+  color: #2B1D0E;
+  background-color: #E6D8A3;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Efeito hover para os links do rodapé */
+footer a:hover {
+  background-color: #2B1D0E;
+  color: #E6D8A3;
+  border-color: #C9A227;
+}
