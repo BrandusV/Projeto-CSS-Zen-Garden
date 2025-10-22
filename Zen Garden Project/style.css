@@ -303,6 +303,119 @@ footer a:hover {
   color: #E6D8A3;
   border-color: #E6D8A3;
 }
+/* =======================================================
+   6. Flexbox e ajustes de layout — Rodapé, Benefícios, Participação
+   ======================================================= */
+
+/* 1. Rodapé da seção principal */
+.main-footer {
+  display: flex;
+  justify-content: center;      /* centraliza horizontalmente os links */
+  align-items: center;          /* centraliza verticalmente */
+  flex-wrap: wrap;              /* permite quebra de linha se necessário */
+  gap: 1em;                     /* espaçamento entre os links */
+  padding: 1em 0;
+}
+
+.main-footer a {
+  flex: 0 1 120px;              /* define tamanho fixo para todos os links */
+  text-align: center;
+  background-color: #E6D8A3;
+  color: #2B1D0E;
+  text-decoration: none;
+  border: 2px solid #C9A227;
+  border-radius: 6px;
+  padding: 0.5em 0;
+  transition: all 0.3s ease;
+}
+
+.main-footer a:hover {
+  background-color: #1a1208;
+  color: #E6D8A3;
+  border-color: #E6D8A3;
+}
+
+/* =======================================================
+   2. Seção de Benefícios (benefits)
+   ======================================================= */
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;       /* centraliza o título verticalmente */
+  border-top: 2px solid #1f295c;
+  border-bottom: 2px solid #1f295c;
+  padding: 1.5em 0;
+  gap: 1em;
+}
+
+.benefits .text {
+  width: 70%;                /* texto ocupa 70% */
+  text-align: justify;
+}
+
+.benefits .title {
+  width: 30%;                /* título ocupa 30% */
+  text-align: right;         /* título à direita */
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1f295c;
+}
+
+/* =======================================================
+   3. Seção de Participação (participation)
+   ======================================================= */
+
+.participation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;       /* centraliza o título verticalmente */
+  border-bottom: 2px solid #1f295c;
+  padding: 1.5em 0;
+  gap: 1em;
+  border-top: none;          /* evita duplicação de borda com .benefits */
+}
+
+.participation .item {
+  width: 50%;                /* cada item ocupa metade */
+  text-align: justify;
+}
+
+/* Estilo para o título da participação */
+.participation .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1f295c;
+}
+
+/* =======================================================
+   Ajustes visuais gerais de integração
+   ======================================================= */
+
+/* Mantém espaçamento e harmonia entre seções */
+section {
+  margin-bottom: 1.5em;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 900px) {
+  .benefits, .participation {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .benefits .text,
+  .benefits .title,
+  .participation .item {
+    width: 100%;
+  }
+
+  .benefits .title,
+  .participation .title {
+    text-align: center;
+  }
+}
 
 
 
