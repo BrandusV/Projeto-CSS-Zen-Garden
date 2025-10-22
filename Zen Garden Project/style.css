@@ -416,6 +416,186 @@ section {
     text-align: center;
   }
 }
+/* =======================================================
+   7. Pseudo-seletores e estilizações de destaque
+   ======================================================= */
+
+/* 1. LINKS — comportamento padrão, hover e visitados */
+a {
+  color: #C9A227;              /* cor de destaque dourada */
+  font-weight: bold;           /* negrito por padrão */
+  text-decoration: none;       /* remove sublinhado */
+  transition: color 0.3s ease; /* transição suave */
+}
+
+a:hover {
+  color: #E6D8A3;              /* tonalidade mais clara ao passar o mouse */
+}
+
+a:visited {
+  color: #B68E1E;              /* cor ligeiramente mais escura após visita */
+  font-weight: normal;         /* remove o negrito dos links já visitados */
+}
+
+/* =======================================================
+   2. PRIMEIRA LETRA DO PRIMEIRO PARÁGRAFO DA SEÇÃO PRINCIPAL
+   ======================================================= */
+.main p:first-of-type::first-letter {
+  font-size: 3em;               /* 3x maior que o texto normal */
+  font-family: "Georgia", serif; /* fonte diferente (estilo clássico) */
+  float: left;                   /* flutua à esquerda do parágrafo */
+  margin-right: 0.2em;           /* espaço entre a letra e o texto */
+  line-height: 1;                /* ajusta proporção vertical */
+  color: #C9A227;                /* mantém tom dourado do tema */
+}
+
+/* =======================================================
+   3. BORDAS ENTRE ITENS DO MENU DE DESIGN
+   ======================================================= */
+.design-selection ul li {
+  border-top: 1px solid #1f295c;   /* borda superior em todos os itens */
+  padding: 0.5em 0;
+}
+
+.design-selection ul li:last-child {
+  border-bottom: 1px solid #1f295c; /* borda inferior apenas no último item */
+}
+
+/* Centralização e harmonia do texto dos itens */
+.design-selection ul li a {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #E6D8A3;
+  text-decoration: none;
+}
+
+.design-selection ul li a:hover {
+  color: #fff;
+  background-color: #2B1D0E;
+  transition: all 0.3s ease;
+}
+/* =======================================================
+   8. MEDIA QUERY — Layout Mobile (até 768px)
+   ======================================================= */
+@media screen and (max-width: 768px) {
+
+  /* Remove o reposicionamento do menu de design */
+  .design-selection {
+    position: static;
+    width: 100%;
+    border-left: none;        /* remove borda lateral */
+    margin: 1em 0;
+  }
+
+  /* Organiza os itens do menu empilhados */
+  .design-selection ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  /* Ajusta layout da seção de benefícios */
+  .benefits {
+    display: flex;
+    flex-direction: column;    /* muda orientação para vertical */
+    text-align: center;
+    border-top: 1px solid #1f295c;
+    border-bottom: 1px solid #1f295c;
+  }
+
+  .benefits .texto,
+  .benefits .titulo {
+    width: 100%;              /* ocupa toda a largura */
+  }
+
+  /* Ajusta layout da seção de participação */
+  .participation {
+    display: flex;
+    flex-direction: column;   /* empilha os elementos */
+    border-top: 1px solid #1f295c;
+    border-bottom: 1px solid #1f295c;
+  }
+
+  .participation .item {
+    width: 100%;              /* cada item ocupa 100% */
+    text-align: center;
+  }
+
+  /* Remove altura fixa do cabeçalho */
+  header {
+    height: auto;
+    padding: 1em;
+  }
+
+  /* Remove espaçamento inicial dos parágrafos */
+  p {
+    text-indent: 0;
+  }
+
+  /* Ajuste geral de texto e margens */
+  body {
+    font-size: 0.95rem;
+    padding: 1em;
+  }
+
+  /* Centraliza o rodapé com flexbox */
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
+  }
+
+  footer a {
+    width: auto;
+    text-align: center;
+  }
+}
+
+/* =======================================================
+   9. MEDIA QUERY — Impressão (sem restrição de tela)
+   ======================================================= */
+@media print {
+
+  /* Fonte serifada para melhor legibilidade */
+  body {
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    background-color: #fff;
+  }
+
+  /* Inverte cores do banner */
+  header {
+    background-color: #f5f5f5 !important;
+    color: #000 !important;
+    border-bottom: 2px solid #000;
+  }
+
+  /* Remove fundos escuros ou imagens */
+  .main, .benefits, .participation, footer, .design-selection {
+    background: #fff !important;
+    color: #000 !important;
+    border: none;
+  }
+
+  /* Remove sombras e efeitos visuais */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Oculta elementos não essenciais na impressão */
+  nav, .design-selection {
+    display: none !important;
+  }
+
+  /* Ajusta margens da página impressa */
+  body {
+    margin: 2cm;
+  }
+}
 
 
 
