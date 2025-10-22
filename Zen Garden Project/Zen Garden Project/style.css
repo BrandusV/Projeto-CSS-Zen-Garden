@@ -1,0 +1,480 @@
+/* ===============================
+   Tema Medieval Fantasioso
+   =============================== */
+
+/* Corpo geral */
+body {
+  background-color: #2B1D0E; /* Fundo marrom escuro */
+  color: #E6D8A3;           /* Fonte clara tipo pergaminho */
+  font-family: 'Garamond', 'Times New Roman', serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabeçalhos e títulos */
+h1, h2, h3 {
+  color: #C9A227; /* Dourado envelhecido para destaque */
+  text-shadow: 1px 1px 4px #000;
+}
+
+/* Links e elementos de destaque */
+a {
+  color: #C9A227;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #E6D8A3; /* Clareia ao passar o mouse */
+  text-shadow: 0 0 6px #C9A227;
+}
+
+/* Estrutura principal */
+.page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(20, 10, 5, 0.85); /* leve transparência */
+  border: 2px solid #C9A227;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #000;
+}
+
+/* Sidebar */
+.sidebar {
+  background: rgba(60, 40, 20, 0.8);
+  border-left: 2px solid #C9A227;
+  padding: 1.5rem;
+}
+
+/* Rodapé */
+footer {
+  margin-top: 2rem;
+  border-top: 1px solid #C9A227;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+/* =======================================================
+   Ajustes complementares — requisitos da tarefa
+   ======================================================= */
+
+/* 1. Aspectos gerais da página */
+body {
+  width: 1200px;              /* a) tamanho fixo da página */
+  margin: 0 auto;             /* centraliza horizontalmente */
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif; /* b) fonte sans-serif */
+}
+
+/* Indentação dos parágrafos */
+p {
+  text-indent: 1em;           /* c) recuo de 1em */
+}
+
+/* 2. Títulos */
+h1, h2, h3 {
+  text-align: center;         /* centraliza todos os títulos */
+}
+
+h1 {
+  font-size: 1.8rem;          /* tamanho definido */
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+/* 3. Seções de resumo e principal */
+
+/* a) Seção de resumo (id="zen-summary") */
+#zen-summary {
+  text-align: center;         /* pode mudar para right, se desejar */
+}
+
+/* b) Seção principal (id="zen-supporting") */
+#zen-supporting p {
+  line-height: 1.5;           /* espaçamento entre linhas 1.5 */
+}
+
+/* 4. Abreviaturas */
+abbr {
+  font-variant: small-caps;   /* texto em small-caps */
+  letter-spacing: 0.05em;     /* leve espaçamento entre letras */
+}
+/* =======================================================
+   Ajustes — Diretrizes gerais e layout
+   ======================================================= */
+
+/* 1. Estrutura geral da página */
+body {
+  width: 80%;                 /* largura geral em 80% */
+  max-width: 1280px;          /* limite máximo de 1280px */
+  margin: 0 auto;             /* centraliza a página na tela */
+}
+
+/* Seção de introdução com altura fixa */
+#zen-intro {
+  height: 550px;
+}
+
+/* Remove o container de arquivos de design da renderização */
+#design-archives {
+  display: none;
+}
+
+/* =======================================================
+   2. Cabeçalho
+   ======================================================= */
+header[role="banner"] {
+  background-color: #1a1208;  /* fundo escuro */
+  color: #E6D8A3;             /* fonte clara */
+  display: flex;              /* coloca h1 e h2 lado a lado */
+  align-items: center;        /* alinha verticalmente */
+  justify-content: space-between; /* separa título e subtítulo */
+  padding: 1em 2em;           /* espaçamento interno */
+  border-bottom: 2px solid #C9A227; /* mantém estilo dourado */
+}
+
+header h1 {
+  margin: 0;
+  padding-left: 1em;          /* espaçamento lateral para o título principal */
+}
+
+header h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* =======================================================
+   3. Menus laterais
+   ======================================================= */
+
+/* Remove os bullets dos menus */
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Espaçamento e centralização dos itens de menu */
+.sidebar li {
+  margin-bottom: 1em;         /* aumenta o espaçamento entre os itens */
+  text-align: center;         /* centraliza cada item */
+}
+
+/* =======================================================
+   4. Rodapé
+   ======================================================= */
+
+footer {
+  background-color: #C9A227;  /* inverte as cores: fundo claro */
+  color: #2B1D0E;             /* texto escuro */
+  margin: 4%;                 /* espaçamento externo de 4% */
+  padding: 1em;
+  text-align: center;
+  border-top: 3px solid #2B1D0E;
+}
+
+/* Links do rodapé transformados em caixas */
+footer a {
+  display: inline-block;
+  border: 2px solid #2B1D0E;  /* borda sólida escura */
+  padding: 0.5em;
+  margin: 0.3em;
+  color: #2B1D0E;
+  background-color: #E6D8A3;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Efeito hover para os links do rodapé */
+footer a:hover {
+  background-color: #2B1D0E;
+  color: #E6D8A3;
+  border-color: #C9A227;
+}
+/* =======================================================
+   5. Estrutura de posicionamento — page-wrapper e painéis
+   ======================================================= */
+
+/* 1. Define o elemento principal como referência para posicionamento */
+.page-wrapper {
+  position: relative; /* referência para posicionamento absoluto interno */
+}
+
+/* 2. Ajustes no painel de explicação principal */
+.explanation {
+  width: 60%;               /* ocupa 60% da largura */
+  margin-right: 35%;        /* cria o espaço à direita */
+  border-right: 1px solid #1f295c;  /* borda lateral direita */
+  padding-right: 2%;        /* espaçamento interno à direita */
+  box-sizing: border-box;   /* garante que o padding não ultrapasse a largura */
+}
+
+/* 3. Posicionamento do menu de designs à direita da página */
+#design-selection {
+  position: absolute;
+  top: 560px;               /* inicia logo após a introdução */
+  left: 62%;                /* começa após o painel explanation */
+  width: 35%;               /* ocupa o espaço restante */
+  padding: 0 2%;            /* espaçamento horizontal interno */
+  box-sizing: border-box;
+}
+
+/* =======================================================
+   3.1. Painel de Designs (ajuste de tamanho e posição)
+   ======================================================= */
+
+/* =======================================================
+   Painel de Designs — Ajuste de proporção e tipografia
+   ======================================================= */
+
+#design-selection {
+  position: absolute;
+  top: 560px;              /* inicia após a introdução */
+  left: 62%;               /* começa após o painel explanation */
+  width: 28%;              /* reduzido para melhor alinhamento */
+  max-height: 380px;       /* altura máxima menor para não ultrapassar o box de participação */
+  overflow-y: auto;        /* adiciona rolagem se necessário */
+  padding: 0 1.5%;         /* espaçamento interno menor */
+  box-sizing: border-box;
+  background-color: rgba(230, 216, 163, 0.85); /* fundo translúcido */
+  border: 1px solid #1f295c;
+  border-radius: 8px;
+  backdrop-filter: blur(3px);
+  scrollbar-width: thin;
+  scrollbar-color: #1f295c #E6D8A3;
+}
+
+/* Barra de rolagem personalizada (para navegadores Webkit) */
+#design-selection::-webkit-scrollbar {
+  width: 6px;
+}
+#design-selection::-webkit-scrollbar-track {
+  background: #E6D8A3;
+}
+#design-selection::-webkit-scrollbar-thumb {
+  background-color: #1f295c;
+  border-radius: 8px;
+}
+
+/* Título do painel */
+#design-selection h3 {
+  text-align: center;
+  color: #1f295c;
+  font-weight: bold;
+  font-size: 1rem; /* diminuído */
+  margin-bottom: 0.4em;
+}
+
+/* Lista e itens do menu */
+#design-selection ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#design-selection li {
+  margin: 0.4em 0; /* espaçamento reduzido */
+}
+
+/* Links individuais dos designs */
+#design-selection a {
+  text-decoration: none;
+  color: #2B1D0E;
+  background-color: #E6D8A3;
+  padding: 0.25em 0.4em;
+  border: 1px solid #C9A227;
+  border-radius: 5px;
+  font-size: 0.8rem; /* fonte reduzida */
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+#design-selection a:hover {
+  background-color: #1a1208;
+  color: #E6D8A3;
+  border-color: #E6D8A3;
+}
+/* =======================================================
+   6. Flexbox e ajustes de layout — Rodapé, Benefícios, Participação
+   ======================================================= */
+
+/* 1. Rodapé da seção principal */
+.main-footer {
+  display: flex;
+  justify-content: center;      /* centraliza horizontalmente os links */
+  align-items: center;          /* centraliza verticalmente */
+  flex-wrap: wrap;              /* permite quebra de linha se necessário */
+  gap: 1em;                     /* espaçamento entre os links */
+  padding: 1em 0;
+}
+
+.main-footer a {
+  flex: 0 1 120px;              /* define tamanho fixo para todos os links */
+  text-align: center;
+  background-color: #E6D8A3;
+  color: #2B1D0E;
+  text-decoration: none;
+  border: 2px solid #C9A227;
+  border-radius: 6px;
+  padding: 0.5em 0;
+  transition: all 0.3s ease;
+}
+
+.main-footer a:hover {
+  background-color: #1a1208;
+  color: #E6D8A3;
+  border-color: #E6D8A3;
+}
+
+/* =======================================================
+   2. Seção de Benefícios (benefits)
+   ======================================================= */
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;       /* centraliza o título verticalmente */
+  border-top: 2px solid #1f295c;
+  border-bottom: 2px solid #1f295c;
+  padding: 1.5em 0;
+  gap: 1em;
+}
+
+.benefits .text {
+  width: 70%;                /* texto ocupa 70% */
+  text-align: justify;
+}
+
+.benefits .title {
+  width: 30%;                /* título ocupa 30% */
+  text-align: right;         /* título à direita */
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1f295c;
+}
+
+/* =======================================================
+   3. Seção de Participação (participation)
+   ======================================================= */
+
+.participation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;       /* centraliza o título verticalmente */
+  border-bottom: 2px solid #1f295c;
+  padding: 1.5em 0;
+  gap: 1em;
+  border-top: none;          /* evita duplicação de borda com .benefits */
+}
+
+.participation .item {
+  width: 50%;                /* cada item ocupa metade */
+  text-align: justify;
+}
+
+/* Estilo para o título da participação */
+.participation .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1f295c;
+}
+
+/* =======================================================
+   Ajustes visuais gerais de integração
+   ======================================================= */
+
+/* Mantém espaçamento e harmonia entre seções */
+section {
+  margin-bottom: 1.5em;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 900px) {
+  .benefits, .participation {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .benefits .text,
+  .benefits .title,
+  .participation .item {
+    width: 100%;
+  }
+
+  .benefits .title,
+  .participation .title {
+    text-align: center;
+  }
+}
+/* =======================================================
+   7. Pseudo-seletores e estilizações de destaque
+   ======================================================= */
+
+/* 1. LINKS — comportamento padrão, hover e visitados */
+a {
+  color: #C9A227;              /* cor de destaque dourada */
+  font-weight: bold;           /* negrito por padrão */
+  text-decoration: none;       /* remove sublinhado */
+  transition: color 0.3s ease; /* transição suave */
+}
+
+a:hover {
+  color: #E6D8A3;              /* tonalidade mais clara ao passar o mouse */
+}
+
+a:visited {
+  color: #B68E1E;              /* cor ligeiramente mais escura após visita */
+  font-weight: normal;         /* remove o negrito dos links já visitados */
+}
+
+/* =======================================================
+   2. PRIMEIRA LETRA DO PRIMEIRO PARÁGRAFO DA SEÇÃO PRINCIPAL
+   ======================================================= */
+.main p:first-of-type::first-letter {
+  font-size: 3em;               /* 3x maior que o texto normal */
+  font-family: "Georgia", serif; /* fonte diferente (estilo clássico) */
+  float: left;                   /* flutua à esquerda do parágrafo */
+  margin-right: 0.2em;           /* espaço entre a letra e o texto */
+  line-height: 1;                /* ajusta proporção vertical */
+  color: #C9A227;                /* mantém tom dourado do tema */
+}
+
+/* =======================================================
+   3. BORDAS ENTRE ITENS DO MENU DE DESIGN
+   ======================================================= */
+.design-selection ul li {
+  border-top: 1px solid #1f295c;   /* borda superior em todos os itens */
+  padding: 0.5em 0;
+}
+
+.design-selection ul li:last-child {
+  border-bottom: 1px solid #1f295c; /* borda inferior apenas no último item */
+}
+
+/* Centralização e harmonia do texto dos itens */
+.design-selection ul li a {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #E6D8A3;
+  text-decoration: none;
+}
+
+.design-selection ul li a:hover {
+  color: #fff;
+  background-color: #2B1D0E;
+  transition: all 0.3s ease;
+}
+
+
+
